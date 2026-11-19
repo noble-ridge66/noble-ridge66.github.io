@@ -1,0 +1,1698 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>杨晨晨官方视频品牌站 - 光影记录与创作者社区</title>
+<meta name="description" content="杨晨晨官方网站，专注原创视频内容与创作者社区，呈现品牌故事、精选影像与真实生活记录，打造值得信赖的高品质内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e8543f'/%3E%3Cpath d='M24 20l20 12-20 12z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --yc-coral:#e8543f;
+  --yc-coral-deep:#c43e2c;
+  --yc-amber:#f0a04b;
+  --yc-ink:#2a2320;
+  --yc-ink-soft:#5c524c;
+  --yc-cream:#fdf8f3;
+  --yc-cream-deep:#f6ece0;
+  --yc-line:#eadfd3;
+  --yc-card:#ffffff;
+  --yc-shadow:0 10px 30px rgba(120,70,40,.08);
+  --yc-shadow-lg:0 22px 50px rgba(120,70,40,.14);
+  --yc-radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--yc-cream);
+  color:var(--yc-ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  scroll-padding-top:132px;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+
+/* ===== 吸顶容器：公告条 + 页头 ===== */
+.yc-sticky-wrap{
+  position:sticky;top:0;z-index:900;
+}
+/* 公告条 */
+.yc-announce{
+  background:linear-gradient(90deg,#2a2320,#3a302b 55%,#2a2320);
+  color:#f5e9dd;
+  font-size:13px;
+  letter-spacing:.02em;
+}
+.yc-announce-inner{
+  max-width:1200px;margin:0 auto;
+  display:flex;align-items:center;gap:14px;
+  padding:8px 24px;
+  overflow:hidden;
+}
+.yc-announce-tag{
+  flex:none;
+  background:var(--yc-coral);
+  color:#fff;
+  font-size:11px;
+  padding:2px 9px;
+  border-radius:999px;
+  font-weight:600;
+  letter-spacing:.06em;
+}
+.yc-announce-track{
+  flex:1;overflow:hidden;white-space:nowrap;
+  position:relative;height:20px;
+}
+.yc-announce-track span{
+  position:absolute;left:0;top:0;
+  display:inline-block;
+  padding-left:100%;
+  animation:ycMarquee 24s linear infinite;
+}
+@keyframes ycMarquee{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-100%)}
+}
+/* 页头 */
+.yc-header{
+  background:rgba(253,248,243,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--yc-line);
+}
+.yc-header-inner{
+  max-width:1200px;margin:0 auto;
+  display:flex;align-items:center;gap:26px;
+  padding:12px 24px;
+}
+.yc-logo{
+  display:flex;align-items:center;gap:10px;
+  font-weight:800;font-size:20px;letter-spacing:.02em;
+  flex:none;
+}
+.yc-logo-mark{
+  width:38px;height:38px;border-radius:11px;
+  background:linear-gradient(135deg,var(--yc-coral),var(--yc-amber));
+  display:grid;place-items:center;color:#fff;
+  box-shadow:0 6px 16px rgba(232,84,63,.35);
+}
+.yc-logo-mark svg{width:18px;height:18px}
+.yc-logo small{
+  display:block;font-size:10px;font-weight:500;
+  color:var(--yc-ink-soft);letter-spacing:.18em;
+  line-height:1.2;
+}
+.yc-nav{
+  display:flex;align-items:center;gap:4px;
+  margin-left:auto;
+}
+.yc-nav a{
+  font-size:14.5px;
+  padding:8px 13px;
+  border-radius:9px;
+  color:var(--yc-ink-soft);
+  transition:.2s;
+  white-space:nowrap;
+}
+.yc-nav a:hover{background:var(--yc-cream-deep);color:var(--yc-coral)}
+.yc-search{
+  display:flex;align-items:center;gap:8px;
+  background:#fff;
+  border:1px solid var(--yc-line);
+  border-radius:999px;
+  padding:6px 8px 6px 15px;
+  width:230px;
+  transition:.25s;
+}
+.yc-search:focus-within{border-color:var(--yc-coral);box-shadow:0 0 0 4px rgba(232,84,63,.1)}
+.yc-search input{
+  border:none;outline:none;background:none;
+  font-size:13.5px;width:100%;color:var(--yc-ink);
+}
+.yc-search button{
+  flex:none;width:28px;height:28px;border-radius:50%;
+  background:var(--yc-coral);color:#fff;display:grid;place-items:center;
+  transition:.2s;
+}
+.yc-search button:hover{background:var(--yc-coral-deep);transform:scale(1.06)}
+.yc-search button svg{width:14px;height:14px}
+.yc-burger{
+  display:none;margin-left:auto;
+  width:42px;height:42px;border-radius:11px;
+  background:#fff;border:1px solid var(--yc-line);
+  place-items:center;
+}
+.yc-burger span{display:block;width:18px;height:2px;background:var(--yc-ink);border-radius:2px;position:relative}
+.yc-burger span::before,.yc-burger span::after{
+  content:"";position:absolute;left:0;width:18px;height:2px;background:var(--yc-ink);border-radius:2px;transition:.25s;
+}
+.yc-burger span::before{top:-6px}
+.yc-burger span::after{top:6px}
+
+/* 通用容器 */
+.yc-wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.yc-section{padding:74px 0}
+.yc-section--alt{background:var(--yc-cream-deep)}
+.yc-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;font-weight:700;letter-spacing:.16em;
+  color:var(--yc-coral);text-transform:uppercase;
+  margin-bottom:12px;
+}
+.yc-eyebrow::before{content:"";width:22px;height:2px;background:var(--yc-coral)}
+.yc-h2{
+  font-size:clamp(24px,3vw,34px);
+  font-weight:800;letter-spacing:-.01em;
+  line-height:1.3;
+}
+.yc-h2 em{font-style:normal;color:var(--yc-coral)}
+.yc-lead{
+  color:var(--yc-ink-soft);font-size:15.5px;
+  max-width:660px;margin-top:12px;
+}
+.yc-section-head{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  gap:20px;flex-wrap:wrap;margin-bottom:36px;
+}
+.yc-more-link{
+  font-size:14px;font-weight:600;color:var(--yc-coral);
+  display:inline-flex;align-items:center;gap:6px;
+  border-bottom:1px dashed rgba(232,84,63,.5);padding-bottom:2px;
+}
+.yc-more-link:hover{color:var(--yc-coral-deep)}
+
+/* ===== 首屏 ===== */
+.yc-hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 420px at 88% -8%,rgba(240,160,75,.28),transparent 60%),
+    radial-gradient(700px 380px at 4% 106%,rgba(232,84,63,.16),transparent 62%),
+    var(--yc-cream);
+}
+.yc-hero-grid{
+  display:grid;grid-template-columns:1.05fr .95fr;
+  gap:52px;align-items:center;
+  padding:64px 24px 78px;
+  max-width:1200px;margin:0 auto;
+}
+.yc-hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--yc-line);
+  border-radius:999px;padding:6px 15px 6px 8px;
+  font-size:12.5px;font-weight:600;color:var(--yc-ink-soft);
+  box-shadow:var(--yc-shadow);margin-bottom:22px;
+}
+.yc-hero-badge i{
+  width:22px;height:22px;border-radius:50%;
+  background:linear-gradient(135deg,var(--yc-coral),var(--yc-amber));
+  display:grid;place-items:center;color:#fff;font-style:normal;font-size:11px;
+}
+.yc-hero h1{
+  font-size:clamp(38px,5.6vw,64px);
+  font-weight:900;line-height:1.08;letter-spacing:-.03em;
+  margin-bottom:8px;
+}
+.yc-hero h1 .yc-h1-sub{
+  display:block;font-size:clamp(15px,1.6vw,19px);
+  font-weight:600;color:var(--yc-ink-soft);
+  letter-spacing:.16em;margin-top:16px;
+}
+.yc-hero-desc{
+  margin:20px 0 26px;font-size:15.5px;color:var(--yc-ink-soft);
+  max-width:520px;
+}
+.yc-hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+.yc-btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:13px 26px;border-radius:12px;
+  font-size:15px;font-weight:700;letter-spacing:.01em;
+  transition:.25s;
+}
+.yc-btn--primary{
+  background:linear-gradient(135deg,var(--yc-coral),#ef6a4f);
+  color:#fff;box-shadow:0 12px 26px rgba(232,84,63,.32);
+}
+.yc-btn--primary:hover{transform:translateY(-2px);box-shadow:0 18px 34px rgba(232,84,63,.4)}
+.yc-btn--ghost{
+  background:#fff;color:var(--yc-ink);border:1px solid var(--yc-line);
+  box-shadow:var(--yc-shadow);
+}
+.yc-btn--ghost:hover{border-color:var(--yc-coral);color:var(--yc-coral)}
+.yc-btn svg{width:16px;height:16px}
+.yc-stats{
+  display:flex;gap:34px;flex-wrap:wrap;
+  padding-top:24px;border-top:1px dashed var(--yc-line);
+}
+.yc-stat b{display:block;font-size:26px;font-weight:900;letter-spacing:-.02em;color:var(--yc-ink)}
+.yc-stat b i{font-style:normal;color:var(--yc-coral);font-size:16px}
+.yc-stat span{font-size:12.5px;color:var(--yc-ink-soft);letter-spacing:.04em}
+
+.yc-hero-visual{position:relative}
+.yc-hero-main{
+  border-radius:24px;overflow:hidden;position:relative;
+  box-shadow:var(--yc-shadow-lg);
+  aspect-ratio:4/5;
+  background:#d9cfc4;
+}
+.yc-hero-main svg{width:100%;height:100%;object-fit:cover}
+.yc-hero-main::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 46%,rgba(20,12,8,.62));
+}
+.yc-hero-play{
+  position:absolute;inset:0;margin:auto;
+  width:72px;height:72px;border-radius:50%;
+  background:rgba(255,255,255,.92);
+  display:grid;place-items:center;z-index:2;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+  transition:.25s;
+}
+.yc-hero-play:hover{transform:scale(1.08);background:#fff}
+.yc-hero-play svg{width:24px;height:24px;fill:var(--yc-coral);margin-left:4px}
+.yc-hero-caption{
+  position:absolute;left:22px;right:22px;bottom:20px;z-index:2;color:#fff;
+}
+.yc-hero-caption b{display:block;font-size:17px;font-weight:700}
+.yc-hero-caption span{font-size:12.5px;opacity:.82}
+.yc-hero-float{
+  position:absolute;left:-26px;bottom:44px;
+  background:#fff;border-radius:16px;
+  padding:13px 17px;box-shadow:var(--yc-shadow-lg);
+  display:flex;align-items:center;gap:11px;z-index:3;
+}
+.yc-hero-float .yc-dot{
+  width:10px;height:10px;border-radius:50%;background:#43b581;
+  box-shadow:0 0 0 4px rgba(67,181,129,.18);
+}
+.yc-hero-float b{font-size:13.5px;display:block}
+.yc-hero-float span{font-size:11.5px;color:var(--yc-ink-soft)}
+.yc-hero-tag{
+  position:absolute;right:-14px;top:38px;z-index:3;
+  background:var(--yc-ink);color:#fff;
+  border-radius:13px;padding:10px 16px;
+  font-size:12.5px;font-weight:600;letter-spacing:.05em;
+  box-shadow:var(--yc-shadow-lg);
+  transform:rotate(3deg);
+}
+.yc-hero-tag b{color:var(--yc-amber)}
+
+/* ===== 关键词深度解析 ===== */
+.yc-about{
+  background:#fff;
+  border-top:1px solid var(--yc-line);border-bottom:1px solid var(--yc-line);
+}
+.yc-about-grid{
+  display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start;
+}
+.yc-about-aside{
+  position:sticky;top:150px;
+}
+.yc-about-card{
+  background:linear-gradient(160deg,var(--yc-cream-deep),#fff);
+  border:1px solid var(--yc-line);border-radius:var(--yc-radius);
+  padding:26px;box-shadow:var(--yc-shadow);
+}
+.yc-about-card h3{font-size:17px;margin-bottom:14px}
+.yc-about-card ul{display:grid;gap:11px}
+.yc-about-card li{
+  display:flex;gap:10px;font-size:14px;color:var(--yc-ink-soft);
+}
+.yc-about-card li::before{
+  content:"◆";color:var(--yc-coral);font-size:10px;line-height:1.9;flex:none;
+}
+.yc-prose{font-size:15.5px;color:var(--yc-ink-soft);line-height:1.95}
+.yc-prose p{margin-bottom:18px}
+.yc-prose h3{
+  font-size:19px;color:var(--yc-ink);margin:30px 0 12px;
+  padding-left:14px;border-left:3px solid var(--yc-coral);
+  line-height:1.4;
+}
+.yc-prose strong{color:var(--yc-ink);font-weight:700}
+.yc-prose .yc-hl{
+  background:linear-gradient(transparent 62%,rgba(240,160,75,.4) 62%);
+  color:var(--yc-ink);font-weight:600;
+}
+.yc-quote{
+  background:var(--yc-cream);border-radius:14px;
+  padding:18px 22px;margin:22px 0;
+  border-left:3px solid var(--yc-amber);
+  font-size:14.5px;color:var(--yc-ink);
+  font-style:italic;
+}
+
+/* ===== 焦点视频 ===== */
+.yc-focus-grid{
+  display:grid;grid-template-columns:1.35fr 1fr;gap:26px;
+}
+.yc-vcard{
+  background:var(--yc-card);border-radius:var(--yc-radius);
+  overflow:hidden;border:1px solid var(--yc-line);
+  box-shadow:var(--yc-shadow);transition:.3s;
+  display:flex;flex-direction:column;
+}
+.yc-vcard:hover{transform:translateY(-5px);box-shadow:var(--yc-shadow-lg);border-color:rgba(232,84,63,.35)}
+.yc-cover{
+  position:relative;aspect-ratio:16/9;overflow:hidden;background:#d9cfc4;
+}
+.yc-cover svg{width:100%;height:100%;transition:transform .5s}
+.yc-vcard:hover .yc-cover svg{transform:scale(1.05)}
+.yc-cover::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.14),transparent 38%,rgba(20,12,8,.5));
+  pointer-events:none;
+}
+.yc-cover-play{
+  position:absolute;inset:0;margin:auto;z-index:2;
+  width:52px;height:52px;border-radius:50%;
+  background:rgba(255,255,255,.9);
+  display:grid;place-items:center;
+  opacity:0;transform:scale(.8);transition:.3s;
+}
+.yc-vcard:hover .yc-cover-play{opacity:1;transform:scale(1)}
+.yc-cover-play svg{width:18px;height:18px;fill:var(--yc-coral);margin-left:3px}
+.yc-cover-badge{
+  position:absolute;left:12px;top:12px;z-index:2;
+  font-size:11.5px;font-weight:700;letter-spacing:.04em;
+  background:rgba(42,35,32,.78);color:#fff;
+  padding:3px 10px;border-radius:999px;
+  backdrop-filter:blur(4px);
+}
+.yc-cover-badge--hot{background:var(--yc-coral)}
+.yc-cover-time{
+  position:absolute;right:12px;bottom:12px;z-index:2;
+  font-size:11.5px;font-weight:600;
+  background:rgba(20,12,8,.7);color:#fff;
+  padding:2px 8px;border-radius:6px;
+}
+.yc-vbody{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.yc-vmeta{
+  display:flex;gap:8px;flex-wrap:wrap;margin-bottom:9px;
+}
+.yc-chip{
+  font-size:11.5px;color:var(--yc-coral-deep);
+  background:rgba(232,84,63,.09);
+  padding:2px 9px;border-radius:6px;font-weight:600;
+}
+.yc-chip--soft{color:var(--yc-ink-soft);background:var(--yc-cream-deep)}
+.yc-vtitle{font-size:16.5px;font-weight:700;line-height:1.45;margin-bottom:7px}
+.yc-vtitle--lg{font-size:20px}
+.yc-vdesc{
+  font-size:13.5px;color:var(--yc-ink-soft);
+  margin-bottom:14px;flex:1;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+}
+.yc-vfoot{
+  display:flex;align-items:center;gap:10px;
+  padding-top:12px;border-top:1px dashed var(--yc-line);
+  font-size:12.5px;color:var(--yc-ink-soft);
+}
+.yc-avatar{
+  width:30px;height:30px;border-radius:50%;flex:none;
+  display:grid;place-items:center;
+  font-size:12px;font-weight:800;color:#fff;
+  overflow:hidden;
+}
+.yc-avatar svg{width:100%;height:100%}
+.yc-vfoot .yc-author{font-weight:600;color:var(--yc-ink)}
+.yc-vfoot .yc-acts{margin-left:auto;display:flex;gap:6px}
+.yc-icon-btn{
+  width:30px;height:30px;border-radius:9px;
+  display:grid;place-items:center;
+  color:var(--yc-ink-soft);transition:.2s;
+}
+.yc-icon-btn:hover{background:var(--yc-cream-deep);color:var(--yc-coral)}
+.yc-icon-btn svg{width:15px;height:15px}
+.yc-icon-btn.is-liked{color:var(--yc-coral)}
+.yc-icon-btn.is-saved{color:var(--yc-amber)}
+.yc-focus-sub{
+  display:grid;grid-template-columns:1fr 1fr;gap:22px;
+}
+.yc-focus-sub .yc-vtitle{font-size:15px}
+.yc-focus-main .yc-vtitle{font-size:22px;line-height:1.35}
+
+/* ===== 创作者 ===== */
+.yc-creator-row{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:22px;
+}
+.yc-creator{
+  background:#fff;border:1px solid var(--yc-line);
+  border-radius:var(--yc-radius);padding:24px 20px;
+  text-align:center;box-shadow:var(--yc-shadow);
+  transition:.3s;position:relative;overflow:hidden;
+}
+.yc-creator::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--yc-coral),var(--yc-amber));
+  transform:scaleX(0);transform-origin:left;transition:.35s;
+}
+.yc-creator:hover{transform:translateY(-5px);box-shadow:var(--yc-shadow-lg)}
+.yc-creator:hover::before{transform:scaleX(1)}
+.yc-creator-ava{
+  width:74px;height:74px;border-radius:50%;
+  margin:0 auto 14px;overflow:hidden;
+  border:3px solid #fff;box-shadow:0 6px 16px rgba(120,70,40,.16);
+}
+.yc-creator-ava svg{width:100%;height:100%}
+.yc-creator h3{font-size:16px;margin-bottom:4px}
+.yc-creator .yc-skill{
+  font-size:12px;color:var(--yc-coral);font-weight:600;
+  margin-bottom:10px;letter-spacing:.02em;
+}
+.yc-creator p{font-size:12.8px;color:var(--yc-ink-soft);line-height:1.7;margin-bottom:14px;min-height:44px}
+.yc-creator-data{
+  display:flex;justify-content:center;gap:18px;
+  padding-top:12px;border-top:1px dashed var(--yc-line);
+  font-size:11.5px;color:var(--yc-ink-soft);
+}
+.yc-creator-data b{display:block;font-size:15px;color:var(--yc-ink);font-weight:800}
+.yc-creator-open{
+  margin-top:14px;width:100%;
+  padding:8px;border-radius:9px;
+  background:var(--yc-cream-deep);font-size:12.5px;font-weight:700;
+  color:var(--yc-ink-soft);transition:.2s;
+}
+.yc-creator-open:hover{background:var(--yc-coral);color:#fff}
+
+/* ===== 专题 ===== */
+.yc-topic-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+}
+.yc-topic{
+  position:relative;border-radius:var(--yc-radius);overflow:hidden;
+  aspect-ratio:4/3;background:#d9cfc4;
+  box-shadow:var(--yc-shadow);transition:.3s;
+  display:block;
+}
+.yc-topic:nth-child(1){grid-row:span 2;aspect-ratio:auto}
+.yc-topic svg{width:100%;height:100%;object-fit:cover;transition:transform .55s}
+.yc-topic:hover svg{transform:scale(1.06)}
+.yc-topic::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.05) 32%,rgba(18,10,6,.78));
+}
+.yc-topic-info{
+  position:absolute;left:20px;right:20px;bottom:18px;z-index:2;color:#fff;
+}
+.yc-topic-info span{
+  display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;
+  background:var(--yc-coral);padding:2px 9px;border-radius:5px;margin-bottom:8px;
+}
+.yc-topic-info h3{font-size:17px;line-height:1.4;margin-bottom:4px}
+.yc-topic-info p{font-size:12.5px;opacity:.8}
+
+/* ===== 榜单 ===== */
+.yc-rank-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.yc-rank{
+  background:#fff;border:1px solid var(--yc-line);
+  border-radius:var(--yc-radius);padding:22px;
+  box-shadow:var(--yc-shadow);
+}
+.yc-rank-head{
+  display:flex;align-items:center;gap:10px;
+  padding-bottom:14px;margin-bottom:6px;
+  border-bottom:1px solid var(--yc-line);
+}
+.yc-rank-head i{
+  width:32px;height:32px;border-radius:9px;flex:none;
+  display:grid;place-items:center;color:#fff;font-style:normal;
+}
+.yc-rank-head h3{font-size:15.5px}
+.yc-rank-head small{display:block;font-size:11px;color:var(--yc-ink-soft);font-weight:400}
+.yc-rank-item{
+  display:flex;align-items:center;gap:11px;
+  padding:10px 0;border-bottom:1px dashed var(--yc-line);
+  font-size:13.5px;
+}
+.yc-rank-item:last-child{border-bottom:none}
+.yc-rank-item b{
+  flex:none;width:20px;font-size:13px;font-weight:800;
+  color:var(--yc-ink-soft);text-align:center;
+}
+.yc-rank-item:nth-child(2) b{color:var(--yc-coral)}
+.yc-rank-item:nth-child(3) b{color:var(--yc-amber)}
+.yc-rank-item .yc-ri-name{flex:1;font-weight:600}
+.yc-rank-item .yc-ri-val{font-size:11.5px;color:var(--yc-ink-soft)}
+
+/* ===== 用户评价 ===== */
+.yc-comment-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.yc-comment{
+  background:#fff;border:1px solid var(--yc-line);
+  border-radius:var(--yc-radius);padding:22px;
+  box-shadow:var(--yc-shadow);position:relative;
+  transition:.3s;
+}
+.yc-comment:hover{transform:translateY(-4px);box-shadow:var(--yc-shadow-lg)}
+.yc-comment::before{
+  content:"“";position:absolute;right:18px;top:6px;
+  font-size:52px;line-height:1;color:rgba(232,84,63,.13);
+  font-family:Georgia,serif;
+}
+.yc-comment-head{display:flex;align-items:center;gap:11px;margin-bottom:12px}
+.yc-comment-head .yc-avatar{width:38px;height:38px;font-size:13px}
+.yc-comment-head b{font-size:14px;display:block}
+.yc-comment-head span{font-size:11.5px;color:var(--yc-ink-soft)}
+.yc-comment p{font-size:13.8px;color:var(--yc-ink-soft);line-height:1.8;position:relative;z-index:1}
+.yc-stars{color:var(--yc-amber);font-size:12px;letter-spacing:1px;margin-top:10px}
+
+/* ===== FAQ ===== */
+.yc-faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.yc-faq{
+  background:#fff;border:1px solid var(--yc-line);
+  border-radius:14px;overflow:hidden;
+  transition:.25s;
+}
+.yc-faq[open]{border-color:rgba(232,84,63,.4);box-shadow:var(--yc-shadow)}
+.yc-faq summary{
+  padding:16px 20px;font-size:14.5px;font-weight:600;
+  cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:14px;
+  align-items:center;
+}
+.yc-faq summary::-webkit-details-marker{display:none}
+.yc-faq summary::after{
+  content:"+";flex:none;font-size:19px;font-weight:400;
+  color:var(--yc-coral);transition:.25s;line-height:1;
+}
+.yc-faq[open] summary::after{transform:rotate(45deg)}
+.yc-faq p{
+  padding:0 20px 18px;font-size:13.5px;color:var(--yc-ink-soft);line-height:1.85;
+}
+
+/* ===== 动态 & 联系 ===== */
+.yc-dyn-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:start}
+.yc-timeline{position:relative;padding-left:26px}
+.yc-timeline::before{
+  content:"";position:absolute;left:6px;top:6px;bottom:6px;
+  width:2px;background:linear-gradient(var(--yc-coral),var(--yc-amber),transparent);
+}
+.yc-tl-item{position:relative;padding-bottom:26px}
+.yc-tl-item:last-child{padding-bottom:0}
+.yc-tl-item::before{
+  content:"";position:absolute;left:-26px;top:7px;
+  width:12px;height:12px;border-radius:50%;
+  background:#fff;border:3px solid var(--yc-coral);
+  box-shadow:0 0 0 4px rgba(232,84,63,.12);
+}
+.yc-tl-item time{font-size:11.5px;font-weight:700;color:var(--yc-coral);letter-spacing:.06em}
+.yc-tl-item h3{font-size:15px;margin:3px 0 4px}
+.yc-tl-item p{font-size:13px;color:var(--yc-ink-soft)}
+.yc-contact-card{
+  background:linear-gradient(155deg,var(--yc-ink),#3d3129);
+  border-radius:22px;padding:32px;color:#f3e8de;
+  box-shadow:var(--yc-shadow-lg);position:relative;overflow:hidden;
+}
+.yc-contact-card::before{
+  content:"";position:absolute;right:-50px;top:-50px;width:180px;height:180px;
+  border-radius:50%;background:radial-gradient(circle,rgba(240,160,75,.4),transparent 70%);
+}
+.yc-contact-card h3{font-size:20px;margin-bottom:10px;position:relative}
+.yc-contact-card p{font-size:13.5px;opacity:.78;margin-bottom:22px;position:relative}
+.yc-contact-line{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:11px 0;border-bottom:1px solid rgba(255,255,255,.1);
+  font-size:13.5px;position:relative;
+}
+.yc-contact-line:last-of-type{border-bottom:none}
+.yc-contact-line span{opacity:.65}
+.yc-contact-line b{font-weight:600}
+.yc-contact-card .yc-btn{width:100%;justify-content:center;margin-top:18px;position:relative}
+
+/* ===== 页脚 ===== */
+.yc-footer{
+  background:#241d19;color:#b8a99c;
+  padding:56px 0 30px;font-size:13px;
+}
+.yc-footer-grid{
+  display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;
+  padding-bottom:38px;border-bottom:1px solid rgba(255,255,255,.09);
+}
+.yc-footer .yc-logo{color:#fff;margin-bottom:14px}
+.yc-footer .yc-logo small{color:#8d7f74}
+.yc-footer-intro{font-size:12.8px;line-height:1.9;max-width:320px;opacity:.75}
+.yc-footer h4{color:#fff;font-size:13.5px;margin-bottom:14px;letter-spacing:.05em}
+.yc-footer li{margin-bottom:9px;font-size:12.8px;opacity:.75;transition:.2s}
+.yc-footer li:hover{opacity:1;color:var(--yc-amber)}
+.yc-footer-bottom{
+  display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  padding-top:24px;font-size:12px;opacity:.62;
+}
+
+/* ===== 回到顶部 ===== */
+.yc-top{
+  position:fixed;right:24px;bottom:26px;z-index:800;
+  width:46px;height:46px;border-radius:14px;
+  background:var(--yc-coral);color:#fff;
+  display:grid;place-items:center;
+  box-shadow:0 10px 26px rgba(232,84,63,.4);
+  opacity:0;pointer-events:none;transform:translateY(14px);
+  transition:.3s;
+}
+.yc-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+.yc-top svg{width:18px;height:18px}
+
+/* ===== Toast & 弹窗 ===== */
+.yc-toast{
+  position:fixed;left:50%;bottom:34px;z-index:1200;
+  transform:translate(-50%,20px);
+  background:var(--yc-ink);color:#fff;
+  padding:11px 22px;border-radius:11px;
+  font-size:13.5px;font-weight:600;
+  opacity:0;pointer-events:none;transition:.3s;
+  box-shadow:0 12px 30px rgba(0,0,0,.25);
+}
+.yc-toast.show{opacity:1;transform:translate(-50%,0)}
+.yc-modal{
+  position:fixed;inset:0;z-index:1100;
+  background:rgba(26,18,13,.55);
+  backdrop-filter:blur(3px);
+  display:grid;place-items:center;padding:20px;
+  opacity:0;pointer-events:none;transition:.25s;
+}
+.yc-modal.show{opacity:1;pointer-events:auto}
+.yc-modal-box{
+  background:#fff;border-radius:20px;
+  width:min(440px,100%);padding:28px;
+  box-shadow:0 30px 70px rgba(0,0,0,.28);
+  transform:translateY(12px);transition:.3s;
+  max-height:88vh;overflow:auto;
+}
+.yc-modal.show .yc-modal-box{transform:translateY(0)}
+.yc-modal-box h3{font-size:18px;margin-bottom:8px}
+.yc-modal-box .yc-modal-desc{font-size:13px;color:var(--yc-ink-soft);margin-bottom:18px}
+.yc-modal-box label{display:block;font-size:12.5px;font-weight:700;margin:13px 0 6px}
+.yc-modal-box input,.yc-modal-box textarea{
+  width:100%;border:1px solid var(--yc-line);border-radius:10px;
+  padding:10px 13px;font-size:13.5px;font-family:inherit;
+  outline:none;transition:.2s;background:var(--yc-cream);
+}
+.yc-modal-box input:focus,.yc-modal-box textarea:focus{border-color:var(--yc-coral);background:#fff}
+.yc-modal-box textarea{resize:vertical;min-height:86px}
+.yc-modal-actions{display:flex;gap:10px;margin-top:20px}
+.yc-modal-actions .yc-btn{flex:1;justify-content:center;padding:11px}
+
+/* 搜索反馈条 */
+.yc-search-feedback{
+  max-width:1200px;margin:0 auto;
+  padding:0 24px;font-size:13px;
+  color:var(--yc-coral-deep);
+  max-height:0;overflow:hidden;transition:.3s;
+}
+.yc-search-feedback.show{padding:10px 24px;max-height:60px}
+
+/* 响应式 */
+@media(max-width:1024px){
+  .yc-hero-grid{grid-template-columns:1fr;gap:40px;padding:48px 24px 60px}
+  .yc-hero-visual{max-width:460px;margin:0 auto;width:100%}
+  .yc-about-grid{grid-template-columns:1fr;gap:34px}
+  .yc-about-aside{position:static}
+  .yc-focus-grid{grid-template-columns:1fr}
+  .yc-creator-row{grid-template-columns:repeat(2,1fr)}
+  .yc-topic-grid{grid-template-columns:1fr 1fr}
+  .yc-topic:nth-child(1){grid-row:auto;aspect-ratio:4/3}
+  .yc-rank-grid{grid-template-columns:1fr}
+  .yc-comment-grid{grid-template-columns:1fr 1fr}
+  .yc-dyn-grid{grid-template-columns:1fr;gap:36px}
+  .yc-footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+  body{scroll-padding-top:120px}
+  .yc-nav{
+    position:absolute;left:0;right:0;top:100%;
+    flex-direction:column;align-items:stretch;
+    background:#fff;border-bottom:1px solid var(--yc-line);
+    padding:10px 16px 16px;gap:2px;
+    box-shadow:0 18px 30px rgba(120,70,40,.12);
+    display:none;
+  }
+  .yc-nav.open{display:flex}
+  .yc-nav a{padding:11px 12px;font-size:15px}
+  .yc-header-inner{gap:12px;flex-wrap:wrap;position:relative}
+  .yc-search{width:100%;order:3;margin-top:4px}
+  .yc-burger{display:grid}
+  .yc-announce-inner{padding:8px 16px}
+  .yc-stats{gap:22px}
+  .yc-stat b{font-size:22px}
+  .yc-focus-sub{grid-template-columns:1fr}
+  .yc-creator-row{grid-template-columns:1fr}
+  .yc-topic-grid{grid-template-columns:1fr}
+  .yc-comment-grid{grid-template-columns:1fr}
+  .yc-faq-grid{grid-template-columns:1fr}
+  .yc-footer-grid{grid-template-columns:1fr;gap:26px}
+  .yc-section{padding:52px 0}
+  .yc-hero-float{left:10px;bottom:14px}
+  .yc-hero-tag{right:6px;top:16px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="yc-sticky-wrap">
+  <div class="yc-announce">
+    <div class="yc-announce-inner">
+      <span class="yc-announce-tag">新增</span>
+      <div class="yc-announce-track">
+        <span>11月19日更新：杨晨晨「城市光影·初冬篇」正片上线 · 创作者共创计划第二期开放报名 · 官方影像库新增4组原创素材 · 社区「拍摄手记」话题投稿突破1200条</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="yc-header">
+    <div class="yc-header-inner">
+      <a href="#top" class="yc-logo" aria-label="杨晨晨官网首页">
+        <span class="yc-logo-mark">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>
+        </span>
+        <span>杨晨晨<small>YANGCHEN VIDEO</small></span>
+      </a>
+      <button class="yc-burger" id="ycBurger" aria-label="展开导航" aria-expanded="false"><span></span></button>
+      <nav class="yc-nav" id="ycNav" aria-label="主导航">
+        <a href="#top">首页</a>
+        <a href="#focus">影像焦点</a>
+        <a href="#topics">专题企划</a>
+        <a href="#creators">创作者</a>
+        <a href="#rank">社区榜单</a>
+        <a href="#faq">帮助中心</a>
+        <a href="#contact">联系我们</a>
+      </nav>
+      <div class="yc-search">
+        <input type="text" id="ycSearchInput" placeholder="搜索影像 / 创作者 / 话题" aria-label="站内搜索">
+        <button id="ycSearchBtn" aria-label="搜索">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="yc-search-feedback" id="ycSearchFeedback"></div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- ===== 首屏 ===== -->
+  <section class="yc-hero" aria-labelledby="ycHeroTitle">
+    <div class="yc-hero-grid">
+      <div class="yc-hero-text">
+        <span class="yc-hero-badge"><i>官</i>杨晨晨官方网站 · 品牌持续推进影像社区</span>
+        <h1 id="ycHeroTitle">杨晨晨<span class="yc-h1-sub">原创影像 · 品牌故事 · 创作者社区</span></h1>
+        <p class="yc-hero-desc">作为专注人物影像与生活记录的原创视频品牌，杨晨晨官方网站致力于为创作者与用户搭建高品质内容生态，用真实镜头传递温暖与力量。</p>
+        <div class="yc-hero-actions">
+          <a href="#focus" class="yc-btn yc-btn--primary">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>
+            进入影像焦点
+          </a>
+          <a href="#creators" class="yc-btn yc-btn--ghost">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+            认识创作者
+          </a>
+        </div>
+        <div class="yc-stats">
+          <div class="yc-stat"><b data-count="2860">2860<i>+</i></b><span>原创影像作品</span></div>
+          <div class="yc-stat"><b data-count="158">158<i>万</i></b><span>社区用户关注</span></div>
+          <div class="yc-stat"><b data-count="42">42<i>位</i></b><span>签约创作者</span></div>
+        </div>
+      </div>
+      <div class="yc-hero-visual">
+        <div class="yc-hero-main">
+          <svg viewBox="0 0 640 800" role="img" aria-label="杨晨晨城市光影初冬篇主视觉封面">
+            <defs>
+              <linearGradient id="ycHeroSky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#f6c99b"/>
+                <stop offset=".48" stop-color="#e88b63"/>
+                <stop offset="1" stop-color="#7a4a44"/>
+              </linearGradient>
+              <linearGradient id="ycHeroFig" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#3a2c2a"/>
+                <stop offset="1" stop-color="#201716"/>
+              </linearGradient>
+              <linearGradient id="ycHeroGlow" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffd9a0" stop-opacity=".9"/>
+                <stop offset="1" stop-color="#ffd9a0" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <rect width="640" height="800" fill="url(#ycHeroSky)"/>
+            <circle cx="500" cy="180" r="96" fill="url(#ycHeroGlow)"/>
+            <circle cx="500" cy="180" r="58" fill="#ffe0b0" opacity=".92"/>
+            <path d="M0 470 L120 380 L220 450 L330 360 L450 460 L560 400 L640 450 L640 800 L0 800 Z" fill="#5b3a35" opacity=".6"/>
+            <path d="M0 560 L140 490 L260 560 L400 480 L540 570 L640 520 L640 800 L0 800 Z" fill="#3b2825" opacity=".82"/>
+            <rect x="0" y="640" width="640" height="160" fill="#22181a" opacity=".9"/>
+            <g opacity=".9">
+              <path d="M322 660c-6-40-2-78 0-112 3-46 10-78 14-112 2-16 10-24 18-24s16 8 18 24c4 34 11 66 14 112 2 34 6 72 0 112z" fill="url(#ycHeroFig)"/>
+              <circle cx="354" cy="292" r="42" fill="#2b1f1d"/>
+              <path d="M312 296c0-28 18-48 42-48s42 20 42 48c0 8-3 15-7 20-6-14-20-22-35-22s-29 8-35 22c-4-5-7-12-7-20z" fill="#1d1413"/>
+              <path d="M322 560c-22 26-38 60-46 100h26c8-32 20-58 36-78z" fill="#332423"/>
+              <path d="M386 560c22 26 38 60 46 100h-26c-8-32-20-58-36-78z" fill="#332423"/>
+            </g>
+            <g opacity=".38" stroke="#ffe8c4" stroke-width="2" fill="none">
+              <path d="M0 380 Q160 340 320 380 T640 370"/>
+              <path d="M0 410 Q160 372 320 412 T640 402"/>
+            </g>
+            <g fill="#fff" opacity=".24">
+              <circle cx="120" cy="220" r="2.4"/><circle cx="196" cy="150" r="1.8"/><circle cx="88" cy="300" r="1.6"/>
+              <circle cx="260" cy="120" r="2.2"/><circle cx="420" cy="90" r="1.7"/><circle cx="560" cy="250" r="2"/>
+            </g>
+          </svg>
+          <button class="yc-hero-play" aria-label="播放品牌主视觉短片">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>
+          </button>
+          <div class="yc-hero-caption">
+            <b>城市光影 · 初冬篇</b>
+            <span>官方发布 · 杨晨晨品牌影像 · 4K 高清</span>
+          </div>
+        </div>
+        <div class="yc-hero-float">
+          <span class="yc-dot"></span>
+          <div><b>社区实时更新</b><span>今日新增 26 条创作者作品</span></div>
+        </div>
+        <div class="yc-hero-tag">品牌 <b>持续运营</b> 第 7 年</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 关键词深度解析 ===== -->
+  <section class="yc-section yc-about" id="about" aria-labelledby="ycAboutTitle">
+    <div class="yc-wrap">
+      <div class="yc-about-grid">
+        <aside class="yc-about-aside">
+          <div class="yc-about-card">
+            <h3>品牌关键词速览</h3>
+            <ul>
+              <li>人物影像与生活记录双主线</li>
+              <li>原创、正版、高清的内容标准</li>
+              <li>创作者社区持续孵化与共创</li>
+              <li>企业动态与官方发布同步公开</li>
+              <li>深耕垂直领域，重视真实与陪伴</li>
+              <li>用户至上的内容审核与反馈机制</li>
+            </ul>
+          </div>
+        </aside>
+        <div>
+          <span class="yc-eyebrow">About Yangchen</span>
+          <h2 class="yc-h2" id="ycAboutTitle">关于<em>杨晨晨</em>：一所持续生长的影像品牌</h2>
+          <div class="yc-prose" style="margin-top:22px">
+            <p><strong>杨晨晨</strong>并不是一个只存在于单条视频里的名字，而是一个围绕人物影像、生活记录与创作者生态持续运营的原创视频品牌。作为品牌官方网站，这里集中呈现品牌故事、官方发布、精品内容与社区动态，让每一位来到这里的用户，都能清楚地感受到这个品牌为何存在、如何成长，以及它愿意为影像这件事付出多少耐心。</p>
+            <p>我们把自己定义为一家以影像为语言的企业：一端连接创作者，另一端连接真实生活。所谓<span class="yc-hl">原创</span>，意味着每一个镜头、每一段配乐、每一次调色都由团队与签约创作者共同完成；所谓<span class="yc-hl">正版</span>，意味着素材来源、授权链路与发布流程都有据可查；所谓<span class="yc-hl">高清</span>，意味着从拍摄到交付，我们坚持以更高规格呈现细节，而不是用模糊的观感换取效率。这些标准听起来朴素，却是品牌能够被持续信赖的基础。</p>
+
+            <h3>关键词的定位与解析</h3>
+            <p>围绕「杨晨晨」这一人物与品牌交织的关键词，我们将其拆解为三个层次来理解。第一层是<strong>人物层</strong>：它是一个具体的创作者符号，承载着镜头前的表达、镜头后的思考，以及长期积累的作品序列。第二层是<strong>品牌层</strong>：它代表一套稳定的审美取向与内容标准，包括对真实的坚持、对温暖的偏好、对细节的耐心，这些取向会体现在选题、剪辑、色彩与叙事节奏的每一个选择里。第三层是<strong>社区层</strong>：它是一群同好共同维护的内容生态，创作者的投稿、用户的反馈、专题的共创，让这个关键词从一个人延伸为一群人。</p>
+            <p>因此，当用户在搜索框里输入这个关键词时，我们希望他得到的不是零散的信息碎片，而是一个完整、可信、可继续探索的入口。官方网站承担的角色，正是把这个入口做得足够清晰：品牌故事说明我们是谁，影像焦点展示我们做了什么，创作者矩阵回答谁在和我们一起做，社区榜单与用户评价则呈现外部的真实反馈。信息之间彼此呼应，构成一个可以被反复访问的内容生态。</p>
+
+            <div class="yc-quote">「我们不追求用最快的方式生产最多内容，而是希望每一条影像都经得起回看，也经得起被追问：它为什么值得被记录。」—— 品牌内容团队</div>
+
+            <h3>内容生态如何运转</h3>
+            <p>内容生态不是一句口号，而是一套具体机制。在选题阶段，团队会结合季节、城市、人物状态与社区话题热度，形成季度影像计划；在制作阶段，签约创作者与品牌制作组分工协作，分别负责拍摄、剪辑、调色与声音设计；在发布阶段，官方发布渠道统一发布并标注版权信息；在反馈阶段，用户的点赞、收藏、评论与举报都会进入内容评估流程，影响下一轮选题与创作者扶持方向。这套机制让「持续运营」不只是页面上的一句说明，而是可被验证的工作方式。</p>
+            <p>我们也清楚地知道，品牌不是靠单方面宣告建立的。口碑来自每一次交付的稳定，来自创作者愿意把作品放在这里，来及用户愿意把时间交给这里。因此，我们在垂直领域里保持专注，在合作中保持透明，在争议中保持沟通。我们相信，一个值得信赖的影像品牌，应该既能在作品里打动人，也能在流程上让人放心。</p>
+
+            <h3>面向未来的三个坚持</h3>
+            <p>第一，坚持<strong>真实</strong>。真实不是粗糙的借口，而是在充分准备之后仍然保留生活的质感。第二，坚持<strong>陪伴</strong>。影像的价值往往在时间里显现，我们希望社区能陪伴创作者走过从生涩到成熟的过程。第三，坚持<strong>创新</strong>。无论是竖屏叙事、短片结构还是互动形式，我们都愿意尝试，但尝试的前提是不牺牲内容品质。这三条坚持，构成了杨晨晨品牌未来几年最重要的行动准则，也构成了这份官方网站想传达的核心信息。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 影像焦点 ===== -->
+  <section class="yc-section" id="focus" aria-labelledby="ycFocusTitle">
+    <div class="yc-wrap">
+      <div class="yc-section-head">
+        <div>
+          <span class="yc-eyebrow">Focus</span>
+          <h2 class="yc-h2" id="ycFocusTitle">影像<em>焦点</em>，本周值得停留的画面</h2>
+          <p class="yc-lead">由品牌内容组与签约创作者共同挑选，覆盖日常记录、人物访谈与创作幕后，均为官方发布的高清正版内容。</p>
+        </div>
+        <a href="#topics" class="yc-more-link">查看全部专题 →</a>
+      </div>
+
+      <div class="yc-focus-grid">
+        <article class="yc-vcard yc-focus-main">
+          <div class="yc-cover">
+            <svg viewBox="0 0 640 360" role="img" aria-label="城市光影初冬篇街角黄昏封面">
+              <defs>
+                <linearGradient id="ycF1a" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#ffc98a"/><stop offset=".55" stop-color="#e8775a"/><stop offset="1" stop-color="#5e3644"/>
+                </linearGradient>
+                <linearGradient id="ycF1b" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#2c2024" stop-opacity=".1"/><stop offset="1" stop-color="#221619" stop-opacity=".95"/>
+                </linearGradient>
+              </defs>
+              <rect width="640" height="360" fill="url(#ycF1a)"/>
+              <circle cx="500" cy="104" r="54" fill="#ffe6ba" opacity=".9"/>
+              <g fill="#4a2f33" opacity=".55">
+                <rect x="0" y="150" width="120" height="210"/><rect x="132" y="112" width="86" height="248"/>
+                <rect x="520" y="138" width="120" height="222"/>
+              </g>
+              <g stroke="#3a2428" stroke-width="4" opacity=".8">
+                <path d="M0 282 L640 268"/><path d="M0 316 L640 300"/>
+              </g>
+              <g>
+                <rect x="196" y="196" width="14" height="76" rx="7" fill="#2b1c20"/>
+                <circle cx="203" cy="182" r="19" fill="#2b1c20"/>
+                <rect x="236" y="208" width="13" height="70" rx="6" fill="#33222a"/>
+                <circle cx="242" cy="194" r="17" fill="#33222a"/>
+              </g>
+              <rect y="0" width="640" height="360" fill="url(#ycF1b)" opacity=".5"/>
+            </svg>
+            <span class="yc-cover-badge yc-cover-badge--hot">品牌主推</span>
+            <span class="yc-cover-time">08:42</span>
+            <span class="yc-cover-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></span>
+          </div>
+          <div class="yc-vbody">
+            <div class="yc-vmeta"><span class="yc-chip">城市探索</span><span class="yc-chip yc-chip--soft">官方发布</span></div>
+            <h3 class="yc-vtitle yc-vtitle--lg">城市光影·初冬篇：在六个街角等到一场好光</h3>
+            <p class="yc-vdesc">从清晨的第一缕侧光到傍晚的暖色余晖，团队用三天时间在同一片街区反复行走，记录光线如何在墙面、玻璃与行人身上移动，呈现城市最安静也最动人的一面。</p>
+            <div class="yc-vfoot">
+              <span class="yc-avatar" style="background:linear-gradient(135deg,#e8543f,#f0a04b)">杨</span>
+              <span class="yc-author">杨晨晨官方</span>
+              <span>· 11.4万 热度</span>
+              <div class="yc-acts">
+                <button class="yc-icon-btn yc-like" aria-label="点赞"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v11H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h3z"/><path d="M7 10l4.5-7a2 2 0 0 1 3.6 1.7L14 9h5.2a2 2 0 0 1 2 2.4l-1.6 7.6a2 2 0 0 1-2 1.6H7"/></svg><span class="yc-like-num" style="display:none">0</span></button>
+                <button class="yc-icon-btn yc-save" aria-label="收藏"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 4h12a1 1 0 0 1 1 1v15l-7-4-7 4V5a1 1 0 0 1 1-1z"/></svg></button>
+                <button class="yc-icon-btn yc-share" data-share="城市光影·初冬篇" aria-label="分享"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="yc-focus-sub">
+          <article class="yc-vcard">
+            <div class="yc-cover">
+              <svg viewBox="0 0 640 360" role="img" aria-label="镜头之后创作幕后访谈现场封面">
+                <defs><linearGradient id="ycF2a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3c4657"/><stop offset="1" stop-color="#1f2530"/></linearGradient></defs>
+                <rect width="640" height="360" fill="url(#ycF2a)"/>
+                <g opacity=".5" stroke="#7fa0c4" stroke-width="2"><path d="M40 300 Q180 240 320 290 T620 270"/><path d="M40 330 Q180 276 320 322 T620 304"/></g>
+                <rect x="150" y="96" width="340" height="180" rx="10" fill="#12171f" stroke="#4c637e" stroke-width="3"/>
+                <circle cx="320" cy="186" r="40" fill="none" stroke="#e8543f" stroke-width="4"/>
+                <circle cx="320" cy="186" r="16" fill="#e8543f" opacity=".85"/>
+                <rect x="236" y="300" width="168" height="12" rx="6" fill="#4c637e"/>
+                <circle cx="180" cy="80" r="8" fill="#f0a04b"/><circle cx="460" cy="80" r="8" fill="#7fa0c4"/>
+              </svg>
+              <span class="yc-cover-badge">人物访谈</span>
+              <span class="yc-cover-time">12:18</span>
+              <span class="yc-cover-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></span>
+            </div>
+            <div class="yc-vbody">
+              <div class="yc-vmeta"><span class="yc-chip">创作幕后</span></div>
+              <h3 class="yc-vtitle">镜头之后：一次关于「慢下来拍」的对话</h3>
+              <p class="yc-vdesc">和品牌三位主创聊了聊选题、器材与耐心。</p>
+              <div class="yc-vfoot">
+                <span class="yc-avatar" style="background:linear-gradient(135deg,#4c637e,#7fa0c4)">柯</span>
+                <span class="yc-author">柯予安</span>
+                <div class="yc-acts">
+                  <button class="yc-icon-btn yc-like" aria-label="点赞"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v11H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h3z"/><path d="M7 10l4.5-7a2 2 0 0 1 3.6 1.7L14 9h5.2a2 2 0 0 1 2 2.4l-1.6 7.6a2 2 0 0 1-2 1.6H7"/></svg></button>
+                  <button class="yc-icon-btn yc-save" aria-label="收藏"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 4h12a1 1 0 0 1 1 1v15l-7-4-7 4V5a1 1 0 0 1 1-1z"/></svg></button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="yc-vcard">
+            <div class="yc-cover">
+              <svg viewBox="0 0 640 360" role="img" aria-label="厨房晨光治愈烹饪记录封面">
+                <defs><linearGradient id="ycF3a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe6c2"/><stop offset="1" stop-color="#e9a86a"/></linearGradient></defs>
+                <rect width="640" height="360" fill="url(#ycF3a)"/>
+                <rect x="0" y="250" width="640" height="110" fill="#c98a52"/>
+                <ellipse cx="320" cy="252" rx="140" ry="18" fill="#a56b3d" opacity=".6"/>
+                <circle cx="320" cy="236" r="58" fill="#fdf3e4"/>
+                <circle cx="320" cy="236" r="40" fill="#f4b96f"/>
+                <g stroke="#fff8ec" stroke-width="6" fill="none" stroke-linecap="round" opacity=".9">
+                  <path d="M286 168 q10 -26 26 -34"/><path d="M318 160 q4 -26 20 -38"/><path d="M350 168 q12 -24 28 -30"/>
+                </g>
+                <rect x="86" y="120" width="70" height="120" rx="8" fill="#f6e3c8" opacity=".85"/>
+                <rect x="486" y="96" width="86" height="144" rx="8" fill="#f6e3c8" opacity=".7"/>
+              </svg>
+              <span class="yc-cover-badge">治愈影像</span>
+              <span class="yc-cover-time">06:55</span>
+              <span class="yc-cover-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></span>
+            </div>
+            <div class="yc-vbody">
+              <div class="yc-vmeta"><span class="yc-chip">美食烹饪</span></div>
+              <h3 class="yc-vtitle">晨光厨房：二十克黄油的早晨仪式</h3>
+              <p class="yc-vdesc">从备料到收拾，完整记录一顿安静的早餐。</p>
+              <div class="yc-vfoot">
+                <span class="yc-avatar" style="background:linear-gradient(135deg,#e9a86a,#c98a52)">林</span>
+                <span class="yc-author">林一勺</span>
+                <div class="yc-acts">
+                  <button class="yc-icon-btn yc-like" aria-label="点赞"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v11H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h3z"/><path d="M7 10l4.5-7a2 2 0 0 1 3.6 1.7L14 9h5.2a2 2 0 0 1 2 2.4l-1.6 7.6a2 2 0 0 1-2 1.6H7"/></svg></button>
+                  <button class="yc-icon-btn yc-save" aria-label="收藏"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 4h12a1 1 0 0 1 1 1v15l-7-4-7 4V5a1 1 0 0 1 1-1z"/></svg></button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 专题企划 ===== -->
+  <section class="yc-section yc-section--alt" id="topics" aria-labelledby="ycTopicsTitle">
+    <div class="yc-wrap">
+      <div class="yc-section-head">
+        <div>
+          <span class="yc-eyebrow">Series</span>
+          <h2 class="yc-h2" id="ycTopicsTitle">专题<em>企划</em>，一条线索看完整季</h2>
+          <p class="yc-lead">专题由品牌编辑部策划，联合社区创作者共同完成，每个专题持续更新，欢迎通过投稿入口参与共创。</p>
+        </div>
+      </div>
+      <div class="yc-topic-grid">
+        <a href="#focus" class="yc-topic">
+          <svg viewBox="0 0 480 640" role="img" aria-label="一个人的城市漫步系列专题封面">
+            <defs><linearGradient id="ycT1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f0a04b"/><stop offset="1" stop-color="#8f4a3d"/></linearGradient></defs>
+            <rect width="480" height="640" fill="url(#ycT1)"/>
+            <g fill="#3a2426" opacity=".72">
+              <rect x="0" y="240" width="110" height="400"/><rect x="126" y="180" width="92" height="460"/>
+              <rect x="300" y="210" width="100" height="430"/><rect x="414" y="260" width="66" height="380"/>
+            </g>
+            <g fill="#f6dcb4" opacity=".55">
+              <rect x="18" y="280" width="18" height="28"/><rect x="56" y="280" width="18" height="28"/>
+              <rect x="330" y="250" width="18" height="28"/><rect x="368" y="250" width="18" height="28"/>
+            </g>
+            <circle cx="240" cy="520" r="26" fill="#2a1b1c"/>
+            <rect x="228" y="540" width="24" height="100" rx="12" fill="#2a1b1c"/>
+            <circle cx="360" cy="120" r="60" fill="#ffe1b0" opacity=".8"/>
+          </svg>
+          <div class="yc-topic-info">
+            <span>更新至第 8 集</span>
+            <h3>一个人的城市漫步</h3>
+            <p>以脚步丈量熟悉的街区，寻找被忽略的日常细节</p>
+          </div>
+        </a>
+        <a href="#creators" class="yc-topic">
+          <svg viewBox="0 0 480 360" role="img" aria-label="手作与器物系列专题封面">
+            <defs><linearGradient id="ycT2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c9a37a"/><stop offset="1" stop-color="#7d5b40"/></linearGradient></defs>
+            <rect width="480" height="360" fill="url(#ycT2)"/>
+            <ellipse cx="240" cy="300" rx="130" ry="26" fill="#5c4029" opacity=".5"/>
+            <path d="M180 300 q-10-96 22-132 q16-18 38 0 q32 36 22 132z" fill="#f2e2cd"/>
+            <ellipse cx="240" cy="168" rx="26" ry="9" fill="#d9c3a6"/>
+            <g stroke="#f4e7d6" stroke-width="3" opacity=".6" fill="none"><path d="M120 96 q30 26 66 12"/><path d="M330 120 q34 22 62 4"/></g>
+          </svg>
+          <div class="yc-topic-info">
+            <span>更新至第 5 集</span>
+            <h3>手作与器物</h3>
+            <p>看创作者如何把时间揉进一件小物</p>
+          </div>
+        </a>
+        <a href="#rank" class="yc-topic">
+          <svg viewBox="0 0 480 360" role="img" aria-label="夜行记录系列专题封面">
+            <defs><linearGradient id="ycT3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#20323f"/><stop offset="1" stop-color="#0d171e"/></linearGradient></defs>
+            <rect width="480" height="360" fill="url(#ycT3)"/>
+            <g fill="#f7d68a" opacity=".9">
+              <circle cx="80" cy="70" r="2.5"/><circle cx="160" cy="40" r="2"/><circle cx="280" cy="62" r="2.6"/>
+              <circle cx="380" cy="44" r="1.8"/><circle cx="430" cy="96" r="2.2"/><circle cx="220" cy="110" r="1.6"/>
+            </g>
+            <g fill="#16242c">
+              <rect x="0" y="210" width="130" height="150"/><rect x="150" y="180" width="96" height="180"/>
+              <rect x="290" y="222" width="90" height="138"/><rect x="396" y="196" width="84" height="164"/>
+            </g>
+            <g fill="#ffd98a" opacity=".8">
+              <rect x="24" y="240" width="14" height="20"/><rect x="60" y="240" width="14" height="20"/>
+              <rect x="320" y="250" width="14" height="20"/><rect x="418" y="228" width="14" height="20"/>
+            </g>
+          </svg>
+          <div class="yc-topic-info">
+            <span>持续更新中</span>
+            <h3>夜行记录</h3>
+            <p>城市入夜之后，另一群人刚刚开始工作</p>
+          </div>
+        </a>
+        <a href="#creators" class="yc-topic">
+          <svg viewBox="0 0 480 360" role="img" aria-label="对话创作者系列专题封面">
+            <defs><linearGradient id="ycT4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b6f87"/><stop offset="1" stop-color="#2b3644"/></linearGradient></defs>
+            <rect width="480" height="360" fill="url(#ycT4)"/>
+            <rect x="90" y="90" width="180" height="110" rx="16" fill="#e9eef4" opacity=".92"/>
+            <rect x="210" y="176" width="184" height="104" rx="16" fill="#f0a04b" opacity=".92"/>
+            <g fill="#5b6f87"><circle cx="130" cy="140" r="12"/><circle cx="170" cy="140" r="12"/><circle cx="210" cy="140" r="12"/></g>
+            <g fill="#8f4a3d"><circle cx="254" cy="226" r="10"/><circle cx="290" cy="226" r="10"/><circle cx="326" cy="226" r="10"/></g>
+          </svg>
+          <div class="yc-topic-info">
+            <span>更新至第 6 集</span>
+            <h3>对话创作者</h3>
+            <p>聊设备、聊选择，也聊那些没拍下来的瞬间</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 创作者矩阵 ===== -->
+  <section class="yc-section" id="creators" aria-labelledby="ycCreatorsTitle">
+    <div class="yc-wrap">
+      <div class="yc-section-head">
+        <div>
+          <span class="yc-eyebrow">Creators</span>
+          <h2 class="yc-h2" id="ycCreatorsTitle">签约<em>创作者</em>，一起把内容做深</h2>
+          <p class="yc-lead">社区汇聚了来自影像、手作、美食、城市记录等垂直领域的创作者，他们的稳定输出构成了品牌内容生态的基本盘。</p>
+        </div>
+      </div>
+      <div class="yc-creator-row">
+        <article class="yc-creator">
+          <div class="yc-creator-ava">
+            <svg viewBox="0 0 100 100" role="img" aria-label="创作者柯予安头像">
+              <rect width="100" height="100" fill="#4c637e"/>
+              <circle cx="50" cy="40" r="18" fill="#e9eef4"/>
+              <path d="M20 100 q0-34 30-34 t30 34z" fill="#e9eef4"/>
+              <circle cx="43" cy="38" r="2.4" fill="#4c637e"/><circle cx="57" cy="38" r="2.4" fill="#4c637e"/>
+            </svg>
+          </div>
+          <h3>柯予安</h3>
+          <div class="yc-skill">人物访谈 / 长镜头</div>
+          <p>相信等待的价值，习惯用固定机位记录一个人完整的状态变化。</p>
+          <div class="yc-creator-data">
+            <div><b>126</b>作品</div>
+            <div><b>18.4万</b>关注</div>
+          </div>
+          <button class="yc-creator-open" data-creator="柯予安">查看创作者主页</button>
+        </article>
+
+        <article class="yc-creator">
+          <div class="yc-creator-ava">
+            <svg viewBox="0 0 100 100" role="img" aria-label="创作者林一勺头像">
+              <rect width="100" height="100" fill="#e9a86a"/>
+              <circle cx="50" cy="42" r="17" fill="#fdf3e4"/>
+              <path d="M18 100 q0-32 32-32 t32 32z" fill="#fdf3e4"/>
+              <path d="M36 28 q14-14 28 0" stroke="#c98a52" stroke-width="4" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>林一勺</h3>
+          <div class="yc-skill">美食烹饪 / 治愈影像</div>
+          <p>把厨房当作剧场，用一顿饭的时间讲完一个小故事。</p>
+          <div class="yc-creator-data">
+            <div><b>203</b>作品</div>
+            <div><b>26.1万</b>关注</div>
+          </div>
+          <button class="yc-creator-open" data-creator="林一勺">查看创作者主页</button>
+        </article>
+
+        <article class="yc-creator">
+          <div class="yc-creator-ava">
+            <svg viewBox="0 0 100 100" role="img" aria-label="创作者苏木头像">
+              <rect width="100" height="100" fill="#7d5b40"/>
+              <circle cx="50" cy="40" r="17" fill="#f2e2cd"/>
+              <path d="M18 100 q0-32 32-32 t32 32z" fill="#f2e2cd"/>
+              <rect x="30" y="58" width="40" height="6" rx="3" fill="#7d5b40"/>
+            </svg>
+          </div>
+          <h3>苏木</h3>
+          <div class="yc-skill">手作DIY / 器物记录</div>
+          <p>做木工第七年，喜欢拍工具与手之间那些细小的摩擦声。</p>
+          <div class="yc-creator-data">
+            <div><b>88</b>作品</div>
+            <div><b>9.7万</b>关注</div>
+          </div>
+          <button class="yc-creator-open" data-creator="苏木">查看创作者主页</button>
+        </article>
+
+        <article class="yc-creator">
+          <div class="yc-creator-ava">
+            <svg viewBox="0 0 100 100" role="img" aria-label="创作者阿岚头像">
+              <rect width="100" height="100" fill="#2b3644"/>
+              <circle cx="50" cy="40" r="17" fill="#cdd8e4"/>
+              <path d="M18 100 q0-32 32-32 t32 32z" fill="#cdd8e4"/>
+              <circle cx="50" cy="70" r="5" fill="#f0a04b"/>
+            </svg>
+          </div>
+          <h3>阿岚</h3>
+          <div class="yc-skill">城市探索 / 夜行记录</div>
+          <p>白天上班，夜里拍摄，专拍那些只在凌晨出现的人和光。</p>
+          <div class="yc-creator-data">
+            <div><b>154</b>作品</div>
+            <div><b>21.3万</b>关注</div>
+          </div>
+          <button class="yc-creator-open" data-creator="阿岚">查看创作者主页</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 社区榜单 ===== -->
+  <section class="yc-section yc-section--alt" id="rank" aria-labelledby="ycRankTitle">
+    <div class="yc-wrap">
+      <div class="yc-section-head">
+        <div>
+          <span class="yc-eyebrow">Ranking</span>
+          <h2 class="yc-h2" id="ycRankTitle">社区<em>榜单</em>，用数据看真实口碑</h2>
+          <p class="yc-lead">榜单按周更新，综合完播、互动与收藏维度计算，只呈现原创正版内容，不参与任何形式的刷量。</p>
+        </div>
+      </div>
+      <div class="yc-rank-grid">
+        <div class="yc-rank">
+          <div class="yc-rank-head">
+            <i style="background:linear-gradient(135deg,#e8543f,#f0a04b)">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+            </i>
+            <div><h3>热度榜</h3><small>本周播放与互动综合</small></div>
+          </div>
+          <div class="yc-rank-item"><b>1</b><span class="yc-ri-name">城市光影·初冬篇</span><span class="yc-ri-val">11.4万</span></div>
+          <div class="yc-rank-item"><b>2</b><span class="yc-ri-name">晨光厨房：黄油早晨</span><span class="yc-ri-val">9.6万</span></div>
+          <div class="yc-rank-item"><b>3</b><span class="yc-ri-name">夜行记录·最后一班</span><span class="yc-ri-val">8.2万</span></div>
+          <div class="yc-rank-item"><b>4</b><span class="yc-ri-name">把一块木头变成勺子</span><span class="yc-ri-val">7.1万</span></div>
+          <div class="yc-rank-item"><b>5</b><span class="yc-ri-name">镜头之后·第三期</span><span class="yc-ri-val">6.5万</span></div>
+        </div>
+        <div class="yc-rank">
+          <div class="yc-rank-head">
+            <i style="background:linear-gradient(135deg,#f0a04b,#e8543f)">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l2.6 6.1L21 10l-4.8 4.3L17.6 21 12 17.6 6.4 21l1.4-6.7L3 10l6.4-.9z"/></svg>
+            </i>
+            <div><h3>新人榜</h3><small>入驻 90 天内创作者</small></div>
+          </div>
+          <div class="yc-rank-item"><b>1</b><span class="yc-ri-name">小满的阳台</span><span class="yc-ri-val">+328%</span></div>
+          <div class="yc-rank-item"><b>2</b><span class="yc-ri-name">半日手记</span><span class="yc-ri-val">+271%</span></div>
+          <div class="yc-rank-item"><b>3</b><span class="yc-ri-name">周末不加班</span><span class="yc-ri-val">+236%</span></div>
+          <div class="yc-rank-item"><b>4</b><span class="yc-ri-name">慢慢走拍</span><span class="yc-ri-val">+198%</span></div>
+          <div class="yc-rank-item"><b>5</b><span class="yc-ri-name">铅笔与光</span><span class="yc-ri-val">+176%</span></div>
+        </div>
+        <div class="yc-rank">
+          <div class="yc-rank-head">
+            <i style="background:linear-gradient(135deg,#7fa0c4,#4c637e)">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+            </i>
+            <div><h3>口碑榜</h3><small>收藏率与完播率综合</small></div>
+          </div>
+          <div class="yc-rank-item"><b>1</b><span class="yc-ri-name">一个人的城市漫步 08</span><span class="yc-ri-val">98.6%</span></div>
+          <div class="yc-rank-item"><b>2</b><span class="yc-ri-name">手作与器物 05</span><span class="yc-ri-val">97.9%</span></div>
+          <div class="yc-rank-item"><b>3</b><span class="yc-ri-name">对话创作者 06</span><span class="yc-ri-val">97.2%</span></div>
+          <div class="yc-rank-item"><b>4</b><span class="yc-ri-name">夜行记录 03</span><span class="yc-ri-val">96.4%</span></div>
+          <div class="yc-rank-item"><b>5</b><span class="yc-ri-name">晨光厨房 12</span><span class="yc-ri-val">95.8%</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 用户评价 ===== -->
+  <section class="yc-section" id="voices" aria-labelledby="ycVoicesTitle">
+    <div class="yc-wrap">
+      <div class="yc-section-head">
+        <div>
+          <span class="yc-eyebrow">Voices</span>
+          <h2 class="yc-h2" id="ycVoicesTitle">用户<em>评价</em>，来自社区的真实声音</h2>
+          <p class="yc-lead">以下内容来自社区用户公开反馈，涵盖内容品质、社区氛围与使用体验等不同维度，我们保留原始表达。</p>
+        </div>
+      </div>
+      <div class="yc-comment-grid">
+        <article class="yc-comment">
+          <div class="yc-comment-head">
+            <span class="yc-avatar" style="background:linear-gradient(135deg,#e8543f,#f0a04b)">周</span>
+            <div><b>周末去看海</b><span>社区用户 · 关注 1 年</span></div>
+          </div>
+          <p>第一次完整看完一个专题，从第一集追到第八集，节奏很稳。特别欣赏片尾对拍摄地点的标注，这种细节让人愿意相信这是认真做内容的品牌。</p>
+          <div class="yc-stars">★★★★★</div>
+        </article>
+        <article class="yc-comment">
+          <div class="yc-comment-head">
+            <span class="yc-avatar" style="background:linear-gradient(135deg,#4c637e,#7fa0c4)">陈</span>
+            <div><b>陈默不沉默</b><span>影像爱好者 · 关注 2 年</span></div>
+          </div>
+          <p>作为同行，很认可他们对授权和版权的说明方式，每个素材都写清楚来源。行业里愿意把这件事讲明白的团队不算多，这一点值得点个赞。</p>
+          <div class="yc-stars">★★★★★</div>
+        </article>
+        <article class="yc-comment">
+          <div class="yc-comment-head">
+            <span class="yc-avatar" style="background:linear-gradient(135deg,#c98a52,#e9a86a)">小</span>
+            <div><b>小满的阳台</b><span>新入驻创作者</span></div>
+          </div>
+          <p>投稿流程比想象中顺畅，初审反馈给得很具体，不是那种模板化的回复。作为新人，第一次投稿就被认真对待，感觉很受鼓励。</p>
+          <div class="yc-stars">★★★★☆</div>
+        </article>
+        <article class="yc-comment">
+          <div class="yc-comment-head">
+            <span class="yc-avatar" style="background:linear-gradient(135deg,#5b6f87,#2b3644)">阿</span>
+            <div><b>阿树今天读书</b><span>社区用户 · 关注 8 个月</span></div>
+          </div>
+          <p>喜欢他们对「真实」的态度，不刻意煽情，也不追求反转。有时候只是想安安静静看十五分钟别人做饭，这种内容现在反而稀缺。</p>
+          <div class="yc-stars">★★★★★</div>
+        </article>
+        <article class="yc-comment">
+          <div class="yc-comment-head">
+            <span class="yc-avatar" style="background:linear-gradient(135deg,#8f4a3d,#f0a04b)">拾</span>
+            <div><b>拾光笔记</b><span>社区用户 · 关注 3 年</span></div>
+          </div>
+          <p>从早期作品一路看到现在，能明显感觉到画面质感和叙事结构在进步。品牌没有急着扩张，而是一步步把内容做扎实，这点挺难得。</p>
+          <div class="yc-stars">★★★★★</div>
+        </article>
+        <article class="yc-comment">
+          <div class="yc-comment-head">
+            <span class="yc-avatar" style="background:linear-gradient(135deg,#7d5b40,#c9a37a)">木</span>
+            <div><b>木屑与锯子</b><span>手作创作者</span></div>
+          </div>
+          <p>希望以后能多一些工具和素材的分享，比如同一场景不同镜头的对比。整体体验很好，移动端播放也很流畅，没有多余跳转。</p>
+          <div class="yc-stars">★★★★☆</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 品牌动态 + 联系 ===== -->
+  <section class="yc-section yc-section--alt" id="contact" aria-labelledby="ycContactTitle">
+    <div class="yc-wrap">
+      <div class="yc-dyn-grid">
+        <div>
+          <span class="yc-eyebrow">Updates</span>
+          <h2 class="yc-h2" id="ycContactTitle">品牌<em>动态</em>与最新更新</h2>
+          <div class="yc-timeline" style="margin-top:30px">
+            <div class="yc-tl-item">
+              <time>2026.11.19</time>
+              <h3>「城市光影·初冬篇」正片上线</h3>
+              <p>官方发布本季首支主视觉短片，同步开放拍摄手记与取景地清单，社区投稿话题同步启动。</p>
+            </div>
+            <div class="yc-tl-item">
+              <time>2026.11.12</time>
+              <h3>创作者共创计划第二期开放报名</h3>
+              <p>面向影像、手作、美食与城市记录方向，提供拍摄支持与联合发布机会，报名截止 12 月 10 日。</p>
+            </div>
+            <div class="yc-tl-item">
+              <time>2026.11.05</time>
+              <h3>官方影像素材库新增 4 组原创素材</h3>
+              <p>新增城市清晨、厨房细节、木作工具与夜行灯光四组高清素材，签约创作者可申请授权使用。</p>
+            </div>
+            <div class="yc-tl-item">
+              <time>2026.10.28</time>
+              <h3>社区内容审核指引更新</h3>
+              <p>细化版权标注与二创说明要求，新增用户反馈通道，平均响应时长缩短至 24 小时内。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="yc-contact-card">
+          <h3>联系我们 / 投稿入口</h3>
+          <p>无论是合作洽谈、内容投稿还是问题反馈，都可以通过这些方式找到我们，工作日内会尽快回复。</p>
+          <div class="yc-contact-line"><span>品牌合作</span><b>brand@yangchen-video.com</b></div>
+          <div class="yc-contact-line"><span>内容投稿</span><b>creator@yangchen-video.com</b></div>
+          <div class="yc-contact-line"><span>媒体联络</span><b>press@yangchen-video.com</b></div>
+          <div class="yc-contact-line"><span>工作时间</span><b>周一至周五 10:00–19:00</b></div>
+          <button class="yc-btn yc-btn--primary" id="ycSubmitOpen">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+            提交你的作品
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="yc-section" id="faq" aria-labelledby="ycFaqTitle">
+    <div class="yc-wrap">
+      <div class="yc-section-head">
+        <div>
+          <span class="yc-eyebrow">Help</span>
+          <h2 class="yc-h2" id="ycFaqTitle">帮助<em>中心</em>，常见问题解答</h2>
+          <p class="yc-lead">关于投稿、版权、合作与账号的常见疑问，可在此查阅；若仍未解决，欢迎通过联系入口留言。</p>
+        </div>
+      </div>
+      <div class="yc-faq-grid">
+        <details class="yc-faq">
+          <summary>如何向杨晨晨官方网站投稿自己的影像作品？</summary>
+          <p>可通过页面底部的投稿入口提交作品链接与简介，初审会核对原创性与版权信息，通过后会由编辑联系确认发布排期。建议在提交前准备好完整素材清单与拍摄说明。</p>
+        </details>
+        <details class="yc-faq">
+          <summary>平台对原创和正版的要求具体是什么？</summary>
+          <p>作品需为投稿者本人原创或已获得完整授权，配乐、字体、素材均需注明来源。使用官方素材库内容时，需遵守授权范围，不得二次转授。我们会对存疑内容进行复核并要求补充说明。</p>
+        </details>
+        <details class="yc-faq">
+          <summary>品牌是否接受商业合作与联合企划？</summary>
+          <p>接受。我们更倾向于与内容调性一致、尊重创作流程的伙伴合作。可先通过品牌合作邮箱说明合作背景、周期与预期形式，团队会在评估后给出可行方案。</p>
+        </details>
+        <details class="yc-faq">
+          <summary>签约创作者享有哪些支持？</summary>
+          <p>包括拍摄设备与场地协调、后期制作协助、联合发布资源、专题共创机会以及持续的内容反馈。具体支持内容会依据创作者方向与阶段制定，并以书面形式确认。</p>
+        </details>
+        <details class="yc-faq">
+          <summary>如何参与社区话题和共创计划？</summary>
+          <p>社区话题会在首页公告与专题区同步更新，投稿时带上话题标签即可参与。共创计划按季度开放报名，需提交作品集与创作方向说明，入选后会收到专属沟通渠道。</p>
+        </details>
+        <details class="yc-faq">
+          <summary>遇到内容问题或版权异议如何处理？</summary>
+          <p>可通过联系入口提交说明与相关证明材料，团队会在 24 小时内初步响应。涉及版权的异议将优先处理，必要时会临时下架相关内容并启动复核流程。</p>
+        </details>
+        <details class="yc-faq">
+          <summary>是否提供素材下载与使用指引？</summary>
+          <p>官方素材库面向签约创作者与合作方开放，下载前需阅读授权说明并完成登记。不同素材的授权范围不同，使用前请以页面标注为准，避免超出许可范围。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="yc-footer">
+  <div class="yc-wrap">
+    <div class="yc-footer-grid">
+      <div>
+        <a href="#top" class="yc-logo">
+          <span class="yc-logo-mark">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>
+          </span>
+          <span>杨晨晨<small>YANGCHEN VIDEO</small></span>
+        </a>
+        <p class="yc-footer-intro">杨晨晨官方网站，专注原创影像与生活记录，持续运营的创作者社区。我们坚持正版、高清与真实表达，用影像连接人与生活，让每一次观看都值得信赖。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#focus">影像焦点</a></li>
+          <li><a href="#topics">专题企划</a></li>
+          <li><a href="#creators">创作者矩阵</a></li>
+          <li><a href="#rank">社区榜单</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>品牌信息</h4>
+        <ul>
+          <li><a href="#about">品牌故事</a></li>
+          <li><a href="#contact">企业动态</a></li>
+          <li><a href="#faq">帮助中心</a></li>
+          <li><a href="#contact">联系我们</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>合作与支持</h4>
+        <ul>
+          <li>品牌合作洽谈</li>
+          <li>创作者共创计划</li>
+          <li>素材授权说明</li>
+          <li>版权与内容反馈</li>
+        </ul>
+      </div>
+    </div>
+    <div class="yc-footer-bottom">
+      <span>© 2026 杨晨晨官方网站 · 版权所有 · 持续运营中</span>
+      <span>原创内容保护 · 正版授权 · 高清呈现 · 用户至上</span>
+    </div>
+  </div>
+</footer>
+
+<button class="yc-top" id="ycTop" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<div class="yc-toast" id="ycToast" role="status" aria-live="polite"></div>
+
+<div class="yc-modal" id="ycModal" role="dialog" aria-modal="true" aria-labelledby="ycModalTitle">
+  <div class="yc-modal-box">
+    <h3 id="ycModalTitle">提交作品</h3>
+    <p class="yc-modal-desc" id="ycModalDesc">请填写基本信息，我们的编辑会在工作日内与你联系。</p>
+    <form id="ycSubmitForm">
+      <label for="ycFName">昵称 / 团队名称</label>
+      <input id="ycFName" type="text" placeholder="例如：周末去看海" required>
+      <label for="ycFContact">联系方式</label>
+      <input id="ycFContact" type="text" placeholder="邮箱或常用社交账号" required>
+      <label for="ycFTopic">作品主题</label>
+      <input id="ycFTopic" type="text" placeholder="例如：城市清晨的光影记录">
+      <label for="ycFDesc">作品简介</label>
+      <textarea id="ycFDesc" placeholder="简单描述创作背景、拍摄方式与想表达的重点"></textarea>
+      <div class="yc-modal-actions">
+        <button type="button" class="yc-btn yc-btn--ghost" id="ycModalCancel">取消</button>
+        <button type="submit" class="yc-btn yc-btn--primary">确认提交</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var toast = document.getElementById('ycToast');
+  var toastTimer = null;
+  function showToast(msg){
+    if(!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 2200);
+  }
+
+  /* 移动端导航折叠 */
+  var burger = document.getElementById('ycBurger');
+  var nav = document.getElementById('ycNav');
+  if(burger && nav){
+    burger.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        nav.classList.remove('open');
+        burger.setAttribute('aria-expanded','false');
+      });
+    });
+  }
+
+  /* 搜索反馈 */
+  var searchInput = document.getElementById('ycSearchInput');
+  var searchBtn = document.getElementById('ycSearchBtn');
+  var searchFeedback = document.getElementById('ycSearchFeedback');
+  function doSearch(){
+    if(!searchInput || !searchFeedback) return;
+    var kw = searchInput.value.trim();
+    if(!kw){
+      searchFeedback.textContent = '请输入影像、创作者或话题关键词，例如「城市光影」「晨光厨房」「手作」。';
+    }else{
+      searchFeedback.textContent = '正在为「' + kw + '」匹配内容：已找到相关影像 6 条、创作者 3 位、专题 2 个，可继续在焦点区浏览。';
+    }
+    searchFeedback.classList.add('show');
+    setTimeout(function(){ searchFeedback.classList.remove('show'); }, 5200);
+  }
+  if(searchBtn){ searchBtn.addEventListener('click', doSearch); }
+  if(searchInput){
+    searchInput.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); doSearch(); } });
+  }
+
+  /* 点赞 / 收藏 */
+  document.querySelectorAll('.yc-like').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      var liked = btn.classList.toggle('is-liked');
+      var numEl = btn.querySelector('.yc-like-num');
+      if(numEl){
+        var cur = parseInt(numEl.textContent, 10) || 0;
+        numEl.textContent = liked ? cur + 1 : Math.max(0, cur - 1);
+      }
+      showToast(liked ? '已点赞，感谢支持原创内容' : '已取消点赞');
+    });
+  });
+  document.querySelectorAll('.yc-save').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      var saved = btn.classList.toggle('is-saved');
+      var path = btn.querySelector('svg path');
+      if(path){ path.setAttribute('fill', saved ? 'currentColor' : 'none'); }
+      showToast(saved ? '已加入收藏，可在个人中心查看' : '已取消收藏');
+    });
+  });
+
+  /* 分享：优先复制链接，降级为提示 */
+  document.querySelectorAll('.yc-share').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      var title = btn.getAttribute('data-share') || '杨晨晨官方网站';
+      var shareText = '分享《' + title + '》到微信 / 微博 / QQ';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(shareText).then(function(){
+          showToast('分享文案已复制，可粘贴到微信 / 微博 / QQ');
+        }).catch(function(){
+          showToast(shareText);
+        });
+      }else{
+        showToast(shareText);
+      }
+    });
+  });
+
+  /* 创作者主页弹窗 */
+  var modal = document.getElementById('ycModal');
+  var modalTitle = document.getElementById('ycModalTitle');
+  var modalDesc = document.getElementById('ycModalDesc');
+  var submitForm = document.getElementById('ycSubmitForm');
+  var submitOpen = document.getElementById('ycSubmitOpen');
+  var modalCancel = document.getElementById('ycModalCancel');
+
+  function openModal(title, desc){
+    if(!modal) return;
+    modalTitle.textContent = title;
+    modalDesc.textContent = desc;
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    if(!modal) return;
+    modal.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.yc-creator-open').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var name = btn.getAttribute('data-creator') || '创作者';
+      openModal(name + ' · 创作者主页', name + ' 已在杨晨晨官方网站发布原创作品，擅长稳定输出与细节记录，欢迎关注并参与社区讨论。');
+    });
+  });
+  if(submitOpen){
+    submitOpen.addEventListener('click', function(){
+      openModal('提交作品', '请填写基本信息，我们的编辑会在工作日内与你联系。');
+      submitForm.reset();
+    });
+  }
+  if(modalCancel){ modalCancel.addEventListener('click', closeModal); }
+  if(modal){
+    modal.addEventListener('click', function(e){ if(e.target === modal){ closeModal(); } });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeModal(); } });
+  }
+  if(submitForm){
+    submitForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      closeModal();
+      showToast('作品信息已提交，编辑将在 3 个工作日内回复');
+      submitForm.reset();
+    });
+  }
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById('ycTop');
+  function onScroll(){
+    if(!topBtn) return;
+    if(window.scrollY > 520){ topBtn.classList.add('show'); }
+    else{ topBtn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  if(topBtn){
+    topBtn.addEventListener('click', function(){
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* 数字滚动 */
+  var counters = document.querySelectorAll('[data-count]');
+  var counted = false;
+  function runCounters(){
+    if(counted) return;
+    counted = true;
+    counters.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+      var suffixEl = el.querySelector('i');
+      var suffix = suffixEl ? suffixEl.outerHTML : '';
+      var start = null, dur = 1200;
+      function step(ts){
+        if(!start) start = ts;
+        var p = Math.min((ts - start) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.innerHTML = Math.round(target * eased) + suffix;
+        if(p < 1){ requestAnimationFrame(step); }
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ runCounters(); io.disconnect(); }
+      });
+    }, { threshold: .4 });
+    var hero = document.querySelector('.yc-stats');
+    if(hero){ io.observe(hero); }
+  }else{
+    runCounters();
+  }
+})();
+</script>
+</body>
+  </html>
